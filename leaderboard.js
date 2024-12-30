@@ -192,9 +192,11 @@ const countdownInterval = setInterval(updateCountdown, 1000);
     gtag('config', 'G-2N6WBR7DEW');
 })();
 
-    const hamburgerMenu = document.getElementById("hamburger-menu");
-    const navbar = document.querySelector(".cyber-navbar");
+    // Select the hamburger menu and navbar
+    const hamburgerMenu = document.querySelector('.hamburger-menu');
+    const navbar = document.querySelector('.cyber-navbar');
 
-    hamburgerMenu.addEventListener("click", () => {
-        navbar.classList.toggle("active");
+    // Add event listener to toggle the 'active' class on the navbar
+    hamburgerMenu.addEventListener('click', function () {
+        navbar.classList.toggle('active');
     });
