@@ -425,3 +425,121 @@ body {
 }
 
 
+/* Mobile Support */
+
+/* General Styles for Smaller Screens */
+@media (max-width: 768px) {
+    .cyber-navbar {
+        left: 5%;
+        right: 5%;
+        padding: 0.8rem 1rem;
+        flex-wrap: wrap;
+    }
+
+    .nav-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .nav-link {
+        font-size: 1.2rem;
+    }
+
+    .cyber-title {
+        font-size: 2rem;
+    }
+
+    .top-ranks {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .rank-card {
+        width: 80%;
+        margin: 0 auto;
+        padding: 1.5rem;
+    }
+
+    .rank-1 {
+        margin-top: 0;
+    }
+
+    .rank-2,
+    .rank-3 {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .cyber-table-container {
+        padding: 1rem;
+    }
+
+    .cyber-table th,
+    .cyber-table td {
+        font-size: 0.9rem;
+        padding: 0.5rem;
+    }
+
+    .cyber-social {
+        position: static;
+        flex-direction: row;
+        justify-content: center;
+        gap: 0.8rem;
+        margin-top: 2rem;
+    }
+
+    .social-link {
+        width: 40px;
+        height: 40px;
+    }
+
+    .countdown {
+        position: static;
+        margin: 2rem auto;
+        text-align: center;
+        padding: 0.8rem 1rem;
+    }
+
+    .countdown::after {
+        font-size: 0.8rem;
+    }
+
+    .warning {
+        font-size: 1rem;
+        padding: 0.8rem;
+    }
+}
+
+/* Ultra Small Devices */
+@media (max-width: 480px) {
+    .cyber-title {
+        font-size: 1.8rem;
+    }
+
+    .rank-card {
+        width: 90%;
+    }
+
+    .nav-link {
+        font-size: 1rem;
+    }
+
+    .countdown {
+        font-size: 0.9rem;
+    }
+
+    .cyber-table th,
+    .cyber-table td {
+        font-size: 0.8rem;
+    }
+
+    .social-link {
+        width: 35px;
+        height: 35px;
+    }
+}
