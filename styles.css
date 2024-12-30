@@ -121,6 +121,8 @@ body {
     transition: all 0.3s ease;
 }
 
+/* Other styles... */
+
 /* Mobile styles */
 @media (max-width: 768px) {
     /* Hide the desktop navbar links on mobile */
@@ -136,7 +138,7 @@ body {
         right: 1rem;
     }
 
-    /* Mobile navigation toggle */
+    /* Mobile navigation toggle (active class will show the links) */
     .cyber-navbar.active .nav-links {
         display: flex;
         flex-direction: column;
@@ -155,6 +157,7 @@ body {
         margin: 1rem 0;
     }
 }
+
 
 .cyber-container {
     max-width: 1200px;
