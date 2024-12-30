@@ -180,8 +180,8 @@ body {
     }
 }
 
-/* Social Buttons at the Bottom on Mobile */
-.cyber-social {
+/* Social Links at the Bottom on Mobile */
+.social-links {
     position: fixed;
     bottom: 2rem;
     left: 50%;
@@ -193,7 +193,7 @@ body {
     z-index: 1000;
 }
 
-.cyber-social .social-link {
+.social-links .social-link {
     width: 40px;
     height: 40px;
     background-size: cover;
@@ -203,7 +203,7 @@ body {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.cyber-social .social-link:hover {
+.social-links .social-link:hover {
     transform: scale(1.1);
     box-shadow: 0 0 15px rgba(255, 255, 255, 1);
 }
@@ -329,6 +329,7 @@ body {
     transform: scale(1.02);
     background: rgba(0, 247, 255, 0.1);
 }
+
 
 
 .social-link {
