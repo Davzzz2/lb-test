@@ -191,3 +191,10 @@ const countdownInterval = setInterval(updateCountdown, 1000);
     gtag('js', new Date());
     gtag('config', 'G-2N6WBR7DEW');
 })();
+
+    const hamburgerMenu = document.getElementById("hamburger-menu");
+    const navbar = document.querySelector(".cyber-navbar");
+
+    hamburgerMenu.addEventListener("click", () => {
+        navbar.classList.toggle("active");
+    });
