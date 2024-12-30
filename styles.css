@@ -121,8 +121,6 @@ body {
     transition: all 0.3s ease;
 }
 
-/* Other styles... */
-
 /* Mobile styles */
 @media (max-width: 768px) {
     /* Hide the desktop navbar links on mobile */
@@ -130,16 +128,11 @@ body {
         display: none;
     }
 
-    /* Hide navbar completely on mobile */
-    .cyber-navbar {
-        display: none;
-    }
-
     /* Show the hamburger menu on mobile */
     .hamburger-menu {
         display: block; /* Show hamburger icon on mobile */
         position: absolute;
-        top: 1rem;
+        top: 2rem; /* Increased margin-top */
         right: 1rem;
     }
 
@@ -161,39 +154,7 @@ body {
         font-size: 1.5rem;
         margin: 1rem 0;
     }
-
-    /* Rank cards display vertically on mobile */
-    .top-ranks {
-        display: block;
-        margin-top: 2rem;
-    }
-
-    .rank-card {
-        margin-top: 1rem;
-        width: 100%;
-    }
-
-    .rank-1, .rank-2, .rank-3 {
-        margin-top: 1rem;
-        transform: none;
-        z-index: 1;
-    }
-
-    /* Move social links to the bottom of the page */
-    .cyber-social {
-        position: fixed;
-        bottom: 2rem;
-        right: 2rem;
-        transform: translateY(0);
-    }
-
-    /* Adjust styling for social links */
-    .social-link {
-        width: 50px;
-        height: 50px;
-    }
 }
-
 
 .cyber-container {
     max-width: 1200px;
@@ -243,6 +204,7 @@ body {
     border: 1px solid var(--neon-blue);
     backdrop-filter: blur(10px);
     font-weight: bold;
+    margin-top: 1rem;
 }
 
 .rank-card::before {
@@ -267,18 +229,21 @@ body {
     transform: scale(1.1);
     z-index: 3;
     margin-top: -4rem;
+    margin-bottom: 10em;
 }
 
 .rank-2 {
     transform: scale(1.1);
     z-index: 2;
     margin-top: 4rem;
+    margin-bottom: 2rem;
 }
 
 .rank-3 {
     transform: scale(1.1);
     z-index: 1;
     margin-top: 4rem;
+    margin-bottom: 2rem;
 }
 
 .rank-card:hover {
@@ -319,6 +284,17 @@ body {
     animation: glow 1.5s infinite alternate;
     margin-top: 1rem;
     text-align: center;
+}
+
+.crown {
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2.5rem;
+    filter: drop-shadow(0 0 10px var(--glow-blue));
+    animation: float 2s ease-in-out infinite;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, 'Emoji';
 }
 
 .warning {
@@ -373,12 +349,67 @@ body {
 
 .cyber-social {
     position: fixed;
-    bottom: 2rem;
     right: 2rem;
-    transform: translateY(0);
+    top: 50%;
+    transform: translateY(-50%);
     display: flex;
     flex-direction: column;
     gap: 1rem;
+}
+
+.countdown {
+    position: fixed;
+    top: -11rem;
+    right: -80rem;
+    padding: 0.6rem 1.2rem;
+    background-color: rgba(0, 4, 40, 0.8);
+    border-radius: 15px;
+    color: var(--stake-white);
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 0 0 10px var(--neon-blue);
+    filter: drop-shadow(0 0 10px var(--glow-blue));
+    max-width: 220px;
+    word-wrap: break-word;
+    line-height: 1.2;
+    white-space: normal;
+    cursor: pointer;
+    position: relative;
+}
+
+.countdown::after {
+    content: "Updated twice a day";
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 4, 40, 0.9);
+    color: var(--stake-white);
+    padding: 0.4rem 0.8rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    white-space: nowrap;
+    box-shadow: 0 0 10px var(--neon-blue);
+}
+
+.countdown:hover::after {
+    visibility: visible;
+    opacity: 1;
+}
+
+.countdown span {
+    display: block;
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+}
+
+.countdown .label {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
 }
 
 .social-link {
